@@ -42,8 +42,6 @@ namespace Course
 
             net.Teacher.SetRating(StudentsFirstCourse[0], 5);
             net.Teacher.SetRating(StudentsSecondCourse[0], 5);
-            //Console.WriteLine(net.Teacher.Name);
-            //Console.WriteLine(photo.Teacher.Name);
 
             net.PrintStudent();
             net.PrintTeacherName();
