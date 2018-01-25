@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HardWorkingPlayer
 {
-    class RandomPlayer
+    public static class RandomPlayer
     {
         
         public static string Name = "RandomPlayer";

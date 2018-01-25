@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HardWorkingPlayer
 {
-    static class HardPlayer
+    public static class HardPlayer
     {
         public static string Name = "HardPlayer";
         public static int LastMove;

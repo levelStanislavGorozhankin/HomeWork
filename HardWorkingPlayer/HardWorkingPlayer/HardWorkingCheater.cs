@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HardWorkingPlayer
 {
-    class HardWorkingCheater
+    public static class HardWorkingCheater
     {
         public static string Name = "HardWorkingCheater";
         public static int[] EnteredNumberLocal = new int[0];

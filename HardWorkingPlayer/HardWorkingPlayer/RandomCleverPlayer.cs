@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HardWorkingPlayer
 {
-    class RandomCleverPlayer
+    public static class RandomCleverPlayer
     {
         public static string Name = "HardWorkingPlayer";
         public static int[] EnteredNumberLocal = new int[0];

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HardWorkingPlayer
 {
-    class RandomCheater
+    public static class RandomCheater
     {
         public static string Name = "RandomCheater";
         public static bool Win = false;
