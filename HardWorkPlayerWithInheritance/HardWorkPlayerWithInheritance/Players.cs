@@ -9,13 +9,13 @@ namespace HardWorkPlayerWithInheritance
     abstract class Players
     {
         public static Random RandomNumber = new Random();
-        public static int[] EnteredNumber { get; set; }
-        public static int MinValue { get; set; }
-        public static int MaxValue { get; set; }
+        protected static int[] EnteredNumber { get; private set; }
+        protected static int MinValue { get; private set; }
+        protected static int MaxValue { get; private set; }
         public string Name { get; set; }
-        public static int RezultValue { get; set; }
-        public bool Win;
-        protected int[] EnteredNumberLocal ;
+        protected static int RezultValue { get; private set; }
+        public bool Win { get; set; }
+        protected int[] EnteredNumberLocal { get; set; }
 
         public abstract int DoMove();
 

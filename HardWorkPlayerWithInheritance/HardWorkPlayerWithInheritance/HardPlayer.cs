@@ -23,6 +23,7 @@ namespace HardWorkPlayerWithInheritance
                 LastMove = MinValue;
                 AddEnterdNumberInArray(LastMove);
             }
+            
             else
             {
                 LastMove++;
