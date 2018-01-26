@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace HardWorkPlayerWithInheritance
 {
-    class RandomPlayer
+    class RandomPlayer : Players
     {
+        public bool Win = false;
+        public RandomPlayer()
+        {
+            Name = "RandomPlayer";
+        }
+
+        public override int DoMove()
+        {
+            int Rand = RandomNumber.Next(MinValue, MaxValue);
+            AddEnterdNumberInArray(Rand);
+            if (Rand == RezultValue)
+                Win = true;
+            return Rand;
+        }
     }
 }
