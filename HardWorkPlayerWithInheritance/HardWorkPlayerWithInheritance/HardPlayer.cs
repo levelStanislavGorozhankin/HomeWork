@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace HardWorkPlayerWithInheritance
 {
-    class HardPlayer:Players
+    class HardWorkingPlayer: Players
     {
         private int LastMove;
-        public bool Win = false;
 
-        public HardPlayer()
+        public HardWorkingPlayer()
         {
             Name = "HardPlayer";
+            Win = false;
         }
 
         public override int DoMove()

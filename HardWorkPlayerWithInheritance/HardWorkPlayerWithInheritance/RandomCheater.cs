@@ -6,21 +6,26 @@ using System.Threading.Tasks;
 
 namespace HardWorkPlayerWithInheritance
 {
-    class RandomPlayer : Players
+    class RandomCheater:Players
     {
-        public RandomPlayer()
+        public RandomCheater()
         {
-            Name = "RandomPlayer";
+            Name = "RandomCheater";
             Win = false;
         }
 
         public override int DoMove()
         {
             int Rand = RandomNumber.Next(MinValue, MaxValue);
+            while (TestEnterdNumberInArray(Rand))
+            {
+                Rand = RandomNumber.Next(MinValue, MaxValue);
+            }
             AddEnterdNumberInArray(Rand);
             if (Rand == RezultValue)
                 Win = true;
             return Rand;
         }
+
     }
 }

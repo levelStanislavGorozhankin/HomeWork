@@ -12,8 +12,10 @@ namespace HardWorkPlayerWithInheritance
         public static int[] EnteredNumber { get; set; }
         public static int MinValue { get; set; }
         public static int MaxValue { get; set; }
-        public string Name;
+        public string Name { get; set; }
         public static int RezultValue { get; set; }
+        public bool Win;
+        protected int[] EnteredNumberLocal ;
 
         public abstract int DoMove();
 
@@ -39,7 +41,7 @@ namespace HardWorkPlayerWithInheritance
             }
         }
 
-        private bool TestEnterdNumberInArray(int number)
+        protected bool TestEnterdNumberInArray(int number)
         {
             for (var i = 0; i < EnteredNumber.Length; i++)
             {
@@ -49,6 +51,17 @@ namespace HardWorkPlayerWithInheritance
                 }
             }
             return false;
+        }
+
+        protected void AddEnterdNumberInLocalArray(int number)
+        {
+            int[] tmpArray = new int[EnteredNumberLocal.Length + 1];
+            for (var i = 0; i < EnteredNumberLocal.Length; i++)
+            {
+                tmpArray[i] = EnteredNumberLocal[i];
+            }
+            tmpArray[EnteredNumberLocal.Length] = number;
+            EnteredNumberLocal = tmpArray;
         }
     }
 }
