@@ -12,7 +12,6 @@ namespace HardWorkPlayerWithInheritance
         {
             Name = "RandomCleverPlayer";
             EnteredNumberLocal = new int[0];
-            Win = false;
         }
 
         public override int DoMove()

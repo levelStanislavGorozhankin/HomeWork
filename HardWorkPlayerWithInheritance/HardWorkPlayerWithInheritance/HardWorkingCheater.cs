@@ -14,7 +14,6 @@ namespace HardWorkPlayerWithInheritance
         {
             Name = "HardWorkingCheater";
             EnteredNumberLocal = new int[0];
-            Win = false;
         }
 
         public override int DoMove()

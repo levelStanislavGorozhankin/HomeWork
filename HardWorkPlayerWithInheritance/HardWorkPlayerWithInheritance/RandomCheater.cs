@@ -11,7 +11,6 @@ namespace HardWorkPlayerWithInheritance
         public RandomCheater()
         {
             Name = "RandomCheater";
-            Win = false;
         }
 
         public override int DoMove()

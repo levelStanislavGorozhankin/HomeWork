@@ -13,7 +13,6 @@ namespace HardWorkPlayerWithInheritance
         public HardWorkingPlayer()
         {
             Name = "HardPlayer";
-            Win = false;
         }
 
         public override int DoMove()
