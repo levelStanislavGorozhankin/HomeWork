@@ -46,6 +46,7 @@ namespace HardWorkPlayerWithInheritance
                 AddEnterdNumberInLocalArray(LastMove);
                 AddEnterdNumberInArray(LastMove);
             }
+
             if (LastMove == RezultValue)
                 Win = true;
             return LastMove;

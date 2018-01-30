@@ -17,6 +17,7 @@ namespace HardWorkPlayerWithInheritance
         public override int DoMove()
         {
             int Rand = RandomNumber.Next(MinValue, MaxValue);
+
             for (var i = 0; i < EnteredNumberLocal.Length; i++)
             {
                 if (Rand == EnteredNumberLocal[i])
@@ -25,10 +26,13 @@ namespace HardWorkPlayerWithInheritance
                     i = -1;
                 }
             }
+
             AddEnterdNumberInLocalArray(Rand);
             AddEnterdNumberInArray(Rand);
+
             if (Rand == RezultValue)
                 Win = true;
+
             return Rand;
         }
 

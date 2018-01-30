@@ -56,10 +56,12 @@ namespace HardWorkPlayerWithInheritance
         protected void AddEnterdNumberInLocalArray(int number)
         {
             int[] tmpArray = new int[EnteredNumberLocal.Length + 1];
+
             for (var i = 0; i < EnteredNumberLocal.Length; i++)
             {
                 tmpArray[i] = EnteredNumberLocal[i];
             }
+
             tmpArray[EnteredNumberLocal.Length] = number;
             EnteredNumberLocal = tmpArray;
         }
