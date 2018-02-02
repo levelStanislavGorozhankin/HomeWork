@@ -38,7 +38,7 @@ namespace LList
             myList.Add("3n");
             myList.Add("4n");
 
-            Console.WriteLine(myList.HeadNode.Data);
+            Console.WriteLine(myList.HeadNode.Data); Console.WriteLine(myList.HeadNode.Previous);
             Console.WriteLine(myList.HeadNode.Next.Data);
             Console.WriteLine(myList.HeadNode.Next.Previous.Data);
 

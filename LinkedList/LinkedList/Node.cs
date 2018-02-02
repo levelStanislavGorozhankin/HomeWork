@@ -23,8 +23,10 @@ namespace LList
         {
             if (Next == null)
             {
-                Next = new Node(data);
-                Next.Previous = headNode;
+                Next = new Node(data)
+                {
+                    Previous = headNode
+                };
             }
             else
             {
