@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace HardWorkPlayerWithInheritance
 {
@@ -15,9 +16,16 @@ namespace HardWorkPlayerWithInheritance
         public string Name { get; set; }
         protected static int RezultValue { get; private set; }
         public bool Win { get; set; }
+        protected static bool EndGame { get; set; }
         protected int[] EnteredNumberLocal { get; set; }
 
-        public abstract int DoMove();
+        protected static EventWaitHandle HardPlayerHandler = new AutoResetEvent(true);
+        protected static EventWaitHandle RandomPlayerHandler = new AutoResetEvent(false);
+        protected static EventWaitHandle RandomCleverPlayerHandler = new AutoResetEvent(false);
+        protected static EventWaitHandle RandomCheaterPlayerHandler = new AutoResetEvent(false);
+        protected static EventWaitHandle HardWorkingCheaterPlayerHandler = new AutoResetEvent(false);
+
+        public abstract void DoMove();
 
         public static void SetMinMaxRandValue(int min, int max, int rnd)
         {

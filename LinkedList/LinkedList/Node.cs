@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace LList
 {
-    class Node
+    class Node<T>
     {
-        public object Data { get; set; }
-        public Node Next { get; set; }
-        public Node Previous { get; set; }
+        public T Data { get; set; }
+        public Node<T> Next { get; set; }
+        public Node<T> Previous { get; set; }
 
-        public Node(object data)
+        public Node(T data)
         {
             Data = data;
             Next = null;
             Previous = null;
         }
 
-        public void Add(object data, Node headNode)
+        public void Add(T data, Node<T> headNode)
         {
             if (Next == null)
             {
-                Next = new Node(data)
+                Next = new Node<T>(data)
                 {
                     Previous = headNode
                 };

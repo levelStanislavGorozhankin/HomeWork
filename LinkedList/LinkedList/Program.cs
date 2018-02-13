@@ -30,7 +30,7 @@ namespace LList
             ////Console.WriteLine(myNode.Pervious);
             //    Console.WriteLine();
 
-            LList myList = new LList();
+            LList<string> myList = new LList<string>();
             myList.Print();
             Console.WriteLine("test");
             myList.Add("1n");
@@ -76,6 +76,12 @@ namespace LList
             myList.Print();
             myList.Del();
             myList.Print();
+            List<int> nn = new List<int>();
+            
+            LList<int> myListInt = new LList<int>();
+            myListInt.Add(8);
+            myListInt.Add(10);
+            myListInt.Print();
         }
     }
 }
