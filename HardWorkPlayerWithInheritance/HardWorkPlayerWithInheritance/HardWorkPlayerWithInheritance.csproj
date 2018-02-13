@@ -42,12 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HardPlayer.cs" />
-    <Compile Include="HardWorkingCheater.cs" />
+    <Compile Include="HardWorkingPlayer.cs" />
+    <Compile Include="HardWorkingCheaterPlayer.cs" />
     <Compile Include="Players.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomCheater.cs" />
+    <Compile Include="RandomCheaterPlayer.cs" />
     <Compile Include="RandomCleverPlayer.cs" />
     <Compile Include="RandomPlayer.cs" />
   </ItemGroup>

@@ -7,12 +7,11 @@ using System.Threading;
 
 namespace HardWorkPlayerWithInheritance
 {
-    class RandomCleverPlayer : Players
+    class RandomCheaterPlayer:Players
     {
-        public RandomCleverPlayer()
+        public RandomCheaterPlayer()
         {
-            Name = "RandomCleverP";
-            EnteredNumberLocal = new int[0];
+            Name = "RandomCheaterP";
         }
 
         public override void DoMove()
@@ -21,20 +20,15 @@ namespace HardWorkPlayerWithInheritance
 
             while (true)
             {
-                RandomCleverPlayerHandler.WaitOne();
+                RandomCheaterPlayerHandler.WaitOne();
 
                 int Rand = RandomNumber.Next(MinValue, MaxValue);
 
-                for (var i = 0; i < EnteredNumberLocal.Length; i++)
+                while (TestEnterdNumberInArray(Rand))
                 {
-                    if (Rand == EnteredNumberLocal[i])
-                    {
-                        Rand = RandomNumber.Next(MinValue, MaxValue);
-                        i = -1;
-                    }
+                    Rand = RandomNumber.Next(MinValue, MaxValue);
                 }
 
-                AddEnterdNumberInLocalArray(Rand);
                 AddEnterdNumberInArray(Rand);
 
                 if (Rand == RezultValue)
@@ -43,12 +37,13 @@ namespace HardWorkPlayerWithInheritance
                     EndGame = true;
                 }
 
-                Console.SetCursorPosition(35, 9 + counterPositionOnScreen);
+                Console.SetCursorPosition(55, 9 + counterPositionOnScreen);
                 Console.Write("{0,4} {1}", Rand, Thread.CurrentThread.Name);
                 counterPositionOnScreen++;
 
-                RandomCheaterPlayerHandler.Set();
+                HardWorkingCheaterPlayerHandler.Set();
             }
         }
+
     }
 }

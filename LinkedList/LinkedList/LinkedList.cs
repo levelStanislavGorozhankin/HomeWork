@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LList
 {
-    class LList<T>
+    class LList<T> where T: class
     {
         public Node<T> HeadNode { get; set; }
 
